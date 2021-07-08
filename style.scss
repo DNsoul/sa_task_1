@@ -209,6 +209,10 @@ body {
     }
 }
 
+.about {
+    overflow-x: clip;
+}
+
 .wide-card {
     display: flex;
     width: 100%;
@@ -369,7 +373,7 @@ body {
 }
 
 .pricing {
-    height: 835px;
+    height: 830px;
 
     & > .content {
         display: flex;
@@ -438,3 +442,102 @@ body {
     }
 }
 
+.testimonials {
+    position: relative;
+    background: #F5FCFD;
+    overflow-x: clip;
+    display: flex;
+    justify-content: flex-end;
+    height: 600px;
+    width: 100%;
+
+    & > img {
+        position: absolute;
+        top: 0;
+        right: 59.5%;
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+
+    width: 54.5%;
+    padding: 85px 0px;
+    
+    &-title {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: flex;
+        width: auto;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 37px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__card {
+        min-width: 362px;
+        height: 215px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(0, 70, 156, 0.08);
+        border-radius: 5px;
+        padding: 22px 32px;
+        margin: 0 30px;
+        box-sizing: border-box;
+        cursor: grab;
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 27px;
+        }
+
+        &-name {
+            margin-bottom: 5px;
+        }
+
+        &-position {
+            color: #999999;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 20px;
+            color: #999999;
+        }
+    }
+    
+    &__scroll {
+        display: flex;
+
+        &-item {
+            display: block;
+            box-sizing: border-box;
+            height: 12px;
+            width: 12px;
+            border: 1px solid #0063DD;
+            border-radius: 50px;
+
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+
+            &-active {
+                width: 38px;
+                background-color:#0063DD;
+            }
+        }
+    }
+}
