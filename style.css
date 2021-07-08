@@ -54,6 +54,11 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .row-reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -596,6 +601,8 @@ body {
 .news {
   height: 965px;
   padding: 103px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .news > .content {
@@ -676,5 +683,102 @@ body {
   font-size: 16px;
   line-height: 150%;
   width: 90%;
+}
+
+.trial {
+  height: 335px;
+  background: #F5FCFD;
+}
+
+.trial .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trial-header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.trial-title {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.trial-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.trial-button {
+  width: 264px;
+}
+
+.subscribe {
+  height: 360px;
+  background: #0F7BFF;
+  padding: 90px 0;
+}
+
+.subscribe .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.subscribe-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  color: #fff;
+  margin-bottom: 27px;
+}
+
+.subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscribe-form-input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 28px;
+  width: 390px;
+  height: 47px;
+  border-style: none;
+  border-radius: 25px 0 0 25px;
+  background: #0063DD;
+  color: #fff;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.subscribe-form-input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.subscribe-form-button {
+  border-radius: 0 25px 25px 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #0063DD;
 }
 /*# sourceMappingURL=style.css.map */
