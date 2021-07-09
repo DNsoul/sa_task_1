@@ -2,7 +2,6 @@
 
 $first-color: #0F7BFF;
 
-
 .button {
     width: 165px;
     height: 50px;
@@ -12,23 +11,37 @@ $first-color: #0F7BFF;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
+    background-color: #fff;
+    color: $first-color;
+    border: 2px solid $first-color;
+    box-sizing: border-box;
 
-    &-bold {
+    &:hover {
         background-color: $first-color;
         color: #fff;
     }
 
-    &-outline {
-        background-color: #fff;
-        color: $first-color;
-        border: 2px solid #0F7BFF;
-        box-sizing: border-box;
-    }
-
     &-circle {
+        position: relative;
         height: 70px;
         width: 70px;
         border-radius: 50%;
+        background-color: $first-color;
+        color: #fff;
+
+        &:hover::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background: rgba(0, 99, 221, 0.23);
+            top: -16px;
+            left: -16px;
+            border-radius: 50%;
+            z-index: -1;
+
+        }
     }
 }
 
@@ -37,6 +50,7 @@ $first-color: #0F7BFF;
 
     & button:first-child {
         border-radius: 50px 0 0 50px;
+        border-right: none;
     }
 
     & button:last-child {
@@ -55,8 +69,18 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 section {
     box-sizing: border-box;
+    position: relative;
+    z-index: 0;
 }
 
 .row-reverse {
@@ -85,7 +109,7 @@ section {
 
         font-weight: bold;
         font-size: 36px;
-        color: #fff;
+        color: white;
 
         display: flex;
         justify-content: center;
@@ -117,7 +141,7 @@ section {
         }
 
         &-button {
-            color: #fff;
+            color: white;
             background-color: #0063DD;
             text-transform: uppercase;
         }
@@ -130,6 +154,7 @@ section {
     height: 1029px;
     display: flex;
     justify-content: center;
+    z-index: 1;
 
     &__block {
         width: 655px;
@@ -142,7 +167,7 @@ section {
         &-title {
             font-weight: bold;
             font-size: 36px;
-            color: #000;
+            color: black;
             margin: 0 0 30px 0;
         }
 
@@ -159,9 +184,10 @@ section {
         }
     }
 
-    & > .button-circle {
+    & > .scroll-down {
         position: absolute;
         bottom: -35px;
+        z-index: 3;
     }
 }
 
@@ -170,16 +196,17 @@ section {
     height: 535px;
     overflow: hidden;
     bottom: 0;
+    z-index: 1;
 }
 
 .features {
     height: 635px;
     background: #F5FCFD;
+    padding-top: 165px;
 
     & > .content {
         display: flex;
         justify-content: space-between;
-        padding-top: 165px;
 
         & > .card:nth-child(even) {
             margin-top: 50px;
@@ -193,7 +220,7 @@ section {
     box-sizing: border-box;
     padding: 15px;
     text-align: center;
-    background: #fff;
+    background: white;
     box-shadow: 0px 4px 16px rgba(0, 66, 148, 0.08);
     border-radius: 5px;
 
@@ -215,6 +242,28 @@ section {
 
 .about {
     overflow-x: clip;
+}
+
+.link-more {
+    
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #0063DD;
+
+    &::before { 
+        content: "";
+        
+        position: absolute;
+        right: -75px;
+        top: 4px;
+
+        width: 67px;
+        height: 15px;
+        
+        background: url('./img/Arrow_blue.svg') no-repeat right center;
+    }
 }
 
 .wide-card {
@@ -286,26 +335,6 @@ section {
             font-size: 16px;
             line-height: 150%;
             margin-bottom: 36px;
-        }
-
-        &-more {
-            position: relative;
-            font-weight: 500;
-            font-size: 16px;
-            text-decoration: none;
-
-            &::before { 
-                content: "";
-                
-                position: absolute;
-                left: 100px;
-                top: 4px;
-
-                width: 67px;
-                height: 15px;
-                
-                background: url('./img/Arrow_blue.svg') no-repeat right center;
-            }
         }
     }
 }
@@ -584,6 +613,7 @@ section {
                 font-size: 24px;
                 line-height: 150%;
                 color: #0063DD;
+                text-decoration: none;
             }
 
             &-text {
@@ -617,6 +647,7 @@ section {
             font-weight: 500;
             font-size: 18px;
             line-height: 150%;
+            color: #000000;
         }
 
         &-text {
@@ -693,6 +724,10 @@ section {
             font-size: 16px;
             line-height: 150%;
 
+            &:focus {
+                outline: none;
+            }
+
             &::-webkit-input-placeholder { color: #fff; }
         }
 
@@ -703,6 +738,10 @@ section {
             line-height: 150%;
             text-transform: uppercase;            
             color: #0063DD;
+
+            &:hover {
+                border: 2px solid white;
+            }
         }
     }
 }
@@ -752,7 +791,16 @@ section {
 }
 
 .scroll-up {
-    position: absolute;
-    right: 158px;
-    bottom: 27px;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    z-index: 10;
+
+    & > .button {
+        background: #FFFFFF;
+
+        &::after {
+            background: rgba(172, 185, 201, 0.23);
+        }
+    }
 }

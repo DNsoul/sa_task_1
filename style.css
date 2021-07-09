@@ -8,14 +8,6 @@
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-}
-
-.button-bold {
-  background-color: #0F7BFF;
-  color: #fff;
-}
-
-.button-outline {
   background-color: #fff;
   color: #0F7BFF;
   border: 2px solid #0F7BFF;
@@ -23,10 +15,31 @@
           box-sizing: border-box;
 }
 
+.button:hover {
+  background-color: #0F7BFF;
+  color: #fff;
+}
+
 .button-circle {
+  position: relative;
   height: 70px;
   width: 70px;
   border-radius: 50%;
+  background-color: #0F7BFF;
+  color: #fff;
+}
+
+.button-circle:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background: rgba(0, 99, 221, 0.23);
+  top: -16px;
+  left: -16px;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .buttons-line {
@@ -37,6 +50,7 @@
 
 .buttons-line button:first-child {
   border-radius: 50px 0 0 50px;
+  border-right: none;
 }
 
 .buttons-line button:last-child {
@@ -54,9 +68,19 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
+  z-index: 0;
 }
 
 .row-reverse {
@@ -91,7 +115,7 @@ section {
   font-size: 14px;
   font-weight: bold;
   font-size: 36px;
-  color: #fff;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,7 +160,7 @@ section {
 }
 
 .nav-bar__menu-button {
-  color: #fff;
+  color: white;
   background-color: #0063DD;
   text-transform: uppercase;
 }
@@ -151,6 +175,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .header__block {
@@ -163,7 +188,7 @@ section {
 .header__block-title {
   font-weight: bold;
   font-size: 36px;
-  color: #000;
+  color: black;
   margin: 0 0 30px 0;
 }
 
@@ -183,9 +208,10 @@ section {
   padding: 0px 147px;
 }
 
-.header > .button-circle {
+.header > .scroll-down {
   position: absolute;
   bottom: -35px;
+  z-index: 3;
 }
 
 .devices {
@@ -193,11 +219,13 @@ section {
   height: 535px;
   overflow: hidden;
   bottom: 0;
+  z-index: 1;
 }
 
 .features {
   height: 635px;
   background: #F5FCFD;
+  padding-top: 165px;
 }
 
 .features > .content {
@@ -207,7 +235,6 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 165px;
 }
 
 .features > .content > .card:nth-child(even) {
@@ -221,7 +248,7 @@ section {
           box-sizing: border-box;
   padding: 15px;
   text-align: center;
-  background: #fff;
+  background: white;
   -webkit-box-shadow: 0px 4px 16px rgba(0, 66, 148, 0.08);
           box-shadow: 0px 4px 16px rgba(0, 66, 148, 0.08);
   border-radius: 5px;
@@ -244,6 +271,24 @@ section {
 
 .about {
   overflow-x: clip;
+}
+
+.link-more {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #0063DD;
+}
+
+.link-more::before {
+  content: "";
+  position: absolute;
+  right: -75px;
+  top: 4px;
+  width: 67px;
+  height: 15px;
+  background: url("./img/Arrow_blue.svg") no-repeat right center;
 }
 
 .wide-card {
@@ -315,23 +360,6 @@ section {
   font-size: 16px;
   line-height: 150%;
   margin-bottom: 36px;
-}
-
-.wide-card__content-more {
-  position: relative;
-  font-weight: 500;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.wide-card__content-more::before {
-  content: "";
-  position: absolute;
-  left: 100px;
-  top: 4px;
-  width: 67px;
-  height: 15px;
-  background: url("./img/Arrow_blue.svg") no-repeat right center;
 }
 
 .steps {
@@ -644,6 +672,7 @@ section {
   font-size: 24px;
   line-height: 150%;
   color: #0063DD;
+  text-decoration: none;
 }
 
 .news__block__main-text {
@@ -676,6 +705,7 @@ section {
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
+  color: #000000;
 }
 
 .news-mini-text {
@@ -769,6 +799,10 @@ section {
   line-height: 150%;
 }
 
+.subscribe-form-input:focus {
+  outline: none;
+}
+
 .subscribe-form-input::-webkit-input-placeholder {
   color: #fff;
 }
@@ -780,6 +814,10 @@ section {
   line-height: 150%;
   text-transform: uppercase;
   color: #0063DD;
+}
+
+.subscribe-form-button:hover {
+  border: 2px solid white;
 }
 
 .footer {
@@ -849,8 +887,17 @@ section {
 }
 
 .scroll-up {
-  position: absolute;
-  right: 158px;
-  bottom: 27px;
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  z-index: 10;
+}
+
+.scroll-up > .button {
+  background: #FFFFFF;
+}
+
+.scroll-up > .button::after {
+  background: rgba(172, 185, 201, 0.23);
 }
 /*# sourceMappingURL=style.css.map */
