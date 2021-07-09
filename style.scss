@@ -706,3 +706,53 @@ section {
         }
     }
 }
+
+.footer {
+    height: 125px;
+    background: #0063DD;
+    color: #fff;
+    position: relative;
+
+    & .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-corp {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    &-links {
+        width: 345px;
+        display: flex;
+        justify-content: space-between;
+
+        & > a {
+            text-decoration: none;
+            color:#fff;
+        }
+    }
+
+    &-socials {
+        width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-connection {
+        display: flex;
+        align-items: center;
+        width: 543px;
+        justify-content: space-between;
+    }
+}
+
+.scroll-up {
+    position: absolute;
+    right: 158px;
+    bottom: 27px;
+}

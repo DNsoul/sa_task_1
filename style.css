@@ -781,4 +781,76 @@ section {
   text-transform: uppercase;
   color: #0063DD;
 }
+
+.footer {
+  height: 125px;
+  background: #0063DD;
+  color: #fff;
+  position: relative;
+}
+
+.footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-corp {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.footer-links {
+  width: 345px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-links > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-socials {
+  width: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-connection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 543px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scroll-up {
+  position: absolute;
+  right: 158px;
+  bottom: 27px;
+}
 /*# sourceMappingURL=style.css.map */
