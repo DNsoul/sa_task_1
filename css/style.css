@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,7 +30,6 @@
   height: 50px;
   padding: 0;
   border-radius: 25px;
-  border: none;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
@@ -72,35 +88,11 @@
   margin: auto;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
   z-index: 0;
-}
-
-.row-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
 }
 
 #burger-toggle {
@@ -188,7 +180,7 @@ section {
 
 .header {
   position: relative;
-  background: url("./img/wave.svg");
+  background: url("../img/wave.svg") center no-repeat;
   height: 1029px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -315,7 +307,7 @@ section {
   top: 4px;
   width: 67px;
   height: 15px;
-  background: url("./img/Arrow_blue.svg") no-repeat right center;
+  background: url("../img/Arrow_blue.svg") no-repeat right center;
 }
 
 .wide-card {
@@ -1494,6 +1486,12 @@ section {
   }
   .scroll-up {
     display: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    zoom: 150%;
   }
 }
 /*# sourceMappingURL=style.css.map */
