@@ -11,6 +11,10 @@
 <body>
     <nav class="nav-bar">
         <span class="nav-bar__brand">AppSon</span>
+        <input type="checkbox" id="burger-toggle">
+        <label class="button nav-bar__burger" for="burger-toggle">
+            X
+        </label>
         <div class="nav-bar__menu">
             <div class="nav-bar__menu-links">
                 <a href="/home">home</a>
@@ -38,12 +42,12 @@
             <img src="./img/Devices.png" alt="Devices">
         </div>
         <div class="scroll-down">
-            <button class="button button-circle">
+            <a href="#features" class="button button-circle">
                 <img src="./img/Arrow.svg" alt="arrow">
-            </button>
+            </a>
         </div>
     </header>
-    <section class="features">
+    <section id="features" class="features">
         <div class="content">
             <div class="card">
                 <img class="card-image" src="./img/Analysis.png" alt="Analysis">

@@ -88,6 +88,10 @@ section {
     flex-direction: row-reverse;
 }
 
+#burger-toggle {
+    display: none;
+}
+
 .nav-bar {
     position: absolute;
     top: 0;
@@ -101,6 +105,10 @@ section {
 
     display: flex;
     justify-content: space-between;
+
+    &__burger {
+        display: none;
+    }
 
     &__brand {
         background-color: $first-color;
@@ -278,21 +286,6 @@ section {
     width: 100%;
     justify-content: space-between;
 
-    &::after { 
-            content: "";
-            
-            position: absolute;
-
-            width: 389.71px;
-            height: 482.98px;
-
-            z-index: 0;
-
-            background: linear-gradient(147.4deg, #0F7BFF 7.27%, #0063DD 93.68%);
-            border-radius: 40px;
-            transform: matrix(0.77, -0.64, -0.64, -0.77, 0, 0);
-        }
-
     &:first-child {
         margin-bottom: 230px;
     }
@@ -327,6 +320,21 @@ section {
 
     &__image-warp {
         position: relative;
+
+        &::after { 
+            content: "";
+            
+            position: absolute;
+    
+            width: 389.71px;
+            height: 482.98px;
+    
+            z-index: 0;
+    
+            background: linear-gradient(147.4deg, #0F7BFF 7.27%, #0063DD 93.68%);
+            border-radius: 40px;
+            transform: matrix(0.77, -0.64, -0.64, -0.77, 0, 0);
+        }
     }
 
     &__content {
@@ -390,6 +398,7 @@ section {
 }
 
 .how-works {
+    z-index: -1;
     height: 635px;
     background: #F5FCFD;
     text-align: center;
@@ -824,9 +833,9 @@ section {
 
     .nav-bar {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        height: 130px;
+        padding: 0 20px;
+        height: 70px;
 
         &__brand {
             height: 70px;
@@ -874,6 +883,10 @@ section {
             height: fit-content;
             margin: 0;
 
+            & .link-more {
+                color: white;
+            }
+
             &__narrow-col {
                 width: 100%;
                 height: 100%;
@@ -890,7 +903,7 @@ section {
                     position: absolute;
                     z-index: 5;
                     color: white;
-                    background: rgba(1,1,1,0.5);
+                    background: rgba(1,1,1,0.7);
                     border-radius: 25px;
                     padding: 15px;
                     box-sizing: border-box;
@@ -996,29 +1009,99 @@ section {
     }
     
     .nav-bar {
-        display: none;
-    }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        background: #0F7BFF;
+        box-sizing: border-box;
+        justify-content: space-around;
 
-    .header {
-        
-        &__block {
-            width: 90%;
+        &__burger {
+            display: block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
 
-            &-buttons {
+        &__menu {
+            display: flex;
+            visibility: hidden;
+            position: absolute;
+            top: 69px;
+            flex-direction: column;
+            height: 250px;
+            background: #0F7BFF;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            transition: 0.1s linear;
+
+            &-links {
                 display: flex;
                 flex-direction: column;
-                padding: 0;
+                margin: 0;
+                height: 100%;
+                justify-content: space-evenly;
+                width: 100%;
+                align-items: center;
 
-                & > button {
-                    width: 100%;
-                    margin-bottom: 5px;
+                & > a {
+                    color: white;
+                    font-size: 18px;
                 }
             }
         }
     }
 
+    #burger-toggle {
+        &:checked {
+            & ~ .nav-bar__menu {
+                visibility: visible;
+                height: 250px;
+                padding: 20px 0;
+            }
+        }
+    }
+
+    .header {
+        &__block {
+            margin-top: 90px;
+            width: 90%;
+
+            &-buttons {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding: 0;
+
+                & > button {
+                    width: 320px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .devices {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: -1;
+            
+            & > img {
+                width: 900px;
+            }
+        }
+    }
+
     .features {
-        display: none;
         height: fit-content;
         padding: 20px 0;
         
@@ -1049,7 +1132,6 @@ section {
     }
 
     .about {
-        display: none;
         height: 1000px;
         padding: 60px 0;
         
@@ -1075,7 +1157,6 @@ section {
     }
 
     .how-works {
-        display: none;
         padding: 20px 0;
         height: fit-content;
 
@@ -1088,10 +1169,11 @@ section {
 
             .steps {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
 
                 & .step {
-                    width: 100%;
+                    width: 310px;
                     margin-bottom: 20px;
 
                     &::after {
@@ -1103,7 +1185,9 @@ section {
     }
 
     .pricing {
-        display: none;
+        height: fit-content;
+        padding: 20px 0;
+
         .description {
             margin-bottom: 20px;
             height: fit-content;
@@ -1112,8 +1196,9 @@ section {
 
         .plans {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
+            flex-wrap: wrap;
 
             & .plan {
                 width: 300px;
@@ -1125,7 +1210,6 @@ section {
     }
 
     .testimonials {
-        display: none;
         height: 440px;
 
         & > img {
@@ -1139,9 +1223,7 @@ section {
         }
     }
 
-    .news {
-        display: none;
-        
+    .news {        
         &-text {
             width: auto;
         }
@@ -1167,7 +1249,6 @@ section {
     }
 
     .trial {
-        display: none;
         & .content {
             display: flex;
             flex-direction: column;
@@ -1176,7 +1257,6 @@ section {
     }
 
     .subscribe {
-        display: none;
         height: 250px;
         padding: 0;
 
@@ -1199,7 +1279,6 @@ section {
     }
 
     .footer {
-        display: none;
         height: 200px;
 
         & .content {
@@ -1217,6 +1296,11 @@ section {
         &-links {
             flex-direction: column;
             margin-bottom: 15px;
+            width: 100%;
         }
+    }
+
+    .scroll-up {
+        display: none;
     }
 }
