@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 165px;
   height: 50px;
   padding: 0;
@@ -61,6 +70,10 @@
   height: 100%;
   width: 1146px;
   margin: auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -518,6 +531,10 @@ section {
   font-size: 18px;
 }
 
+.plans .plan > button {
+  margin: auto;
+}
+
 .testimonials {
   position: relative;
   background: #F5FCFD;
@@ -582,8 +599,7 @@ section {
   margin: 0 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  cursor: -webkit-grab;
-  cursor: grab;
+  cursor: ew-resize;
 }
 
 .reviews__card-header {
@@ -629,13 +645,15 @@ section {
   width: 12px;
   border: 1px solid #0063DD;
   border-radius: 50px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .reviews__scroll-item:not(:last-child) {
   margin-right: 8px;
 }
 
-.reviews__scroll-item-active {
+.reviews__scroll-item:hover {
   width: 38px;
   background-color: #0063DD;
 }
