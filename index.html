@@ -11,207 +11,215 @@
     <nav class="nav-bar">
         <span class="nav-bar__brand">AppSon</span>
         <input type="checkbox" id="burger-toggle">
-        <label class="button nav-bar__burger" for="burger-toggle">
+        <label class="nav-bar__burger button" for="burger-toggle">
             X
         </label>
         <div class="nav-bar__menu">
             <div class="nav-bar__menu-links">
-                <a href="#header">home</a>
-                <a href="#features">features</a>
-                <a href="#pricing">pricing</a>
-                <a href="#news">pages</a>
+                <a class="nav-bar__menu-links-item" href="#header">home</a>
+                <a class="nav-bar__menu-links-item" href="#features">features</a>
+                <a class="nav-bar__menu-links-item" href="#pricing">pricing</a>
+                <a class="nav-bar__menu-links-item" href="#news">pages</a>
             </div>
             <button class="nav-bar__menu-button button">sign up</button>
         </div>
     </nav>
     <header id="header" class="header">
-        <div class="header__block">
-            <h1 class="header__block-title">
+        <div class="header__inner">
+            <h1 class="header__title">
                 Best Desktop App for You
             </h1>
-            <p class="header__block-content">
+            <p class="header__text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div class="header__block-buttons">
-                <button class="button button-bold">Download</button>
-                <button class="button button-outline">Free Trial</button>
+            <div class="header__buttons">
+                <button class="header__buttons-item button button-bold">Download</button>
+                <button class="header__buttons-item button button-outline">Free Trial</button>
             </div>
         </div>
-        <div class="devices">
-            <img src="./img/Devices.png" alt="Devices">
+        <div class="header__devices">
+            <img class="header__devices-image" src="./img/Devices.png" alt="Devices">
         </div>
-        <div class="scroll-down">
+        <div class="header__scroll-down">
             <a href="#features" class="button button-circle">
                 <img src="./img/Arrow.svg" alt="arrow">
             </a>
         </div>
     </header>
     <section id="features" class="features">
-        <div class="content">
-            <div class="card">
-                <img class="card-image" src="./img/Analysis.png" alt="Analysis">
-                <div class="card-body">
-                    <h2 class="card-title">Analysis</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        <div class="container">
+            <div class="features__inner">
+                <div class="card">
+                    <img class="card__image" src="./img/Analysis.png" alt="Analysis">
+                    <div class="card__body">
+                        <h2 class="card__body-title">Analysis</h2>
+                        <p class="card__body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-image" src="./img/Clean Design.png" alt="Clean Design">
-                <div class="card-body">
-                    <h2 class="card-title">Clean Design</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <div class="card">
+                    <img class="card__image" src="./img/Clean Design.png" alt="Clean Design">
+                    <div class="card__body">
+                        <h2 class="card__body-title">Clean Design</h2>
+                        <p class="card__body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-image" src="./img/Messaging.png" alt="Messaging">
-                <div class="card-body">
-                    <h2 class="card-title">Messaging</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <div class="card">
+                    <img class="card__image" src="./img/Messaging.png" alt="Messaging">
+                    <div class="card__body">
+                        <h2 class="card__body-title">Messaging</h2>
+                        <p class="card__body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="about" class="about">
-        <div class="content">
-            <div class="wide-card">
-                <div class="wide-card__wide-col">
-                    <div class="wide-card__image-warp">
-                        <img class="wide-card__image" src="./img/Easy messaging.png" alt="Easy messaging">
+        <div class="container">
+            <div class="about__inner">
+                <div class="wide-card">
+                    <div class="wide-card__wide-col">
+                        <div class="wide-card__image-warp">
+                            <img class="wide-card__image" src="./img/Easy messaging.png" alt="Easy messaging">
+                        </div>
+                    </div>
+                    <div class="wide-card__narrow-col">
+                        <h2 class="wide-card__content-title">Easy Messaging</h2>
+                        <p class="wide-card__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="/" class="wide-card__link link-more">Read More</a>
                     </div>
                 </div>
-                <div class="wide-card__narrow-col">
-                    <h2 class="wide-card__content-title">Easy Messaging</h2>
-                    <p class="wide-card__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="/" class="link-more">Read More</a>
-                </div>
-            </div>
-            <div class="wide-card">
-                <div class="wide-card__wide-col">
-                    <h2 class="wide-card__content-title">Keep In Touch</h2>
-                    <p class="wide-card__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="/" class="link-more">Read More</a>
-                </div>
-                <div class="wide-card__narrow-col">
-                    <div class="wide-card__image-warp">
-                        <img src="./img/Keep In Touch.png" alt="Keep In Touch" class="wide-card__image">
+                <div class="wide-card">
+                    <div class="wide-card__wide-col">
+                        <h2 class="wide-card__content-title">Keep In Touch</h2>
+                        <p class="wide-card__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="/" class="wide-card__link link-more">Read More</a>
+                    </div>
+                    <div class="wide-card__narrow-col">
+                        <div class="wide-card__image-warp">
+                            <img src="./img/Keep In Touch.png" alt="Keep In Touch" class="wide-card__image">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="how-works" class="how-works">
-        <div class="content">
-            <h2>How Does It Works?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
-            <div class="steps">
-                <div class="step">
-                    <img class="step-image" src="./img/Create An Account.png" alt="Create An Account">
-                    <h3 class="step-title">Create An Account</h3>
-                    <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                </div>
-                <div class="step">
-                    <img class="step-image" src="./img/Confirm Email.png" alt="Confirm Email">
-                    <h3 class="step-title">Confirm Email</h3>
-                    <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                </div>
-                <div class="step">
-                    <img class="step-image" src="./img/See Results.png" alt="See Results">
-                    <h3 class="step-title">See Results</h3>
-                    <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        <div class="container">
+            <div class="how-works__inner">
+                <h2 class="how-works__title">How Does It Works?</h2>
+                <p  class="how-works__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                <div class="how-works__steps">
+                    <div class="step">
+                        <img class="step__image" src="./img/Create An Account.png" alt="Create An Account">
+                        <h3 class="step__title">Create An Account</h3>
+                        <p class="step__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    </div>
+                    <div class="step">
+                        <img class="step__image" src="./img/Confirm Email.png" alt="Confirm Email">
+                        <h3 class="step__title">Confirm Email</h3>
+                        <p class="step__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    </div>
+                    <div class="step">
+                        <img class="step__image" src="./img/See Results.png" alt="See Results">
+                        <h3 class="step__title">See Results</h3>
+                        <p class="step__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="pricing" class="pricing">
-        <div class="content">
-            <div class="description">
-                <h2 class="description-title">Pricing Plan</h2>
-                <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
-                <div class="buttons-line">
-                    <button class="button">Monthly</button>
-                    <button class="button">Yearly</button>
+        <div class="container">
+            <div class="pricing__inner">
+                <div class="pricing__description">
+                    <h2 class="pricing__description-title">Pricing Plan</h2>
+                    <p class="pricing__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                    <div class="pricing__buttons buttons-line">
+                        <button class="button">Monthly</button>
+                        <button class="button">Yearly</button>
+                    </div>
                 </div>
-            </div>
-            <div class="plans">
-                <div class="plan">
-                    <img src="./img/Premium.jpg" alt="Premium" class="plan-image">
-                    <h3 class="plan-title">Premium</h3>
-                    <hr>
-                    <ul class="plan__list">
-                        <li>2gb Hosting</li>
-                        <li>10 Custom Domain</li>
-                        <li>SSD Hosting</li>
-                        <li>50 gb Bandwith</li>
-                        <li>Free Support</li>
-                    </ul>
-                    <span class="plan-price">49.00</span>
-                    <button class="button">Try Now</button>
-                </div>
-                <div class="plan">
-                    <img src="./img/Standart.jpg" alt="Standart" class="plan-image">
-                    <h3 class="plan-title">Standart</h3>
-                    <hr>
-                    <ul class="plan__list">
-                        <li>2gb Hosting</li>
-                        <li>10 Custom Domain</li>
-                        <li>SSD Hosting</li>
-                        <li>50 gb Bandwith</li>
-                        <li>Free Support</li>
-                    </ul>
-                    <span class="plan-price">19.00</span>
-                    <button class="button">Try Now</button>
+                <div class="pricing__plans">
+                    <div class="plan">
+                        <img src="./img/Premium.jpg" alt="Premium" class="plan-image">
+                        <h3 class="plan-title">Premium</h3>
+                        <hr>
+                        <ul class="plan__list">
+                            <li>2gb Hosting</li>
+                            <li>10 Custom Domain</li>
+                            <li>SSD Hosting</li>
+                            <li>50 gb Bandwith</li>
+                            <li>Free Support</li>
+                        </ul>
+                        <span class="plan-price">49.00</span>
+                        <button class="plan-button button">Try Now</button>
+                    </div>
+                    <div class="plan">
+                        <img src="./img/Standart.jpg" alt="Standart" class="plan-image">
+                        <h3 class="plan-title">Standart</h3>
+                        <hr>
+                        <ul class="plan__list">
+                            <li>2gb Hosting</li>
+                            <li>10 Custom Domain</li>
+                            <li>SSD Hosting</li>
+                            <li>50 gb Bandwith</li>
+                            <li>Free Support</li>
+                        </ul>
+                        <span class="plan-price">19.00</span>
+                        <button class="plan-button button">Try Now</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="testimonials" class="testimonials">
-        <img src="./img/Testimonials.png" alt="Testimonials">
+        <img class="testimonials__image" src="./img/Testimonials.png" alt="Testimonials">
         <div class="reviews">
-            <h2 class="reviews-title">Trusted By More Than 55M Peoples</h2>
-            <div id="list-card" class="reviews__list ">
-                <div id="card-si_1" class="reviews__card">
-                    <div class="reviews__card-header">
-                        <div class="people">
-                            <h3 class="reviews__card-name">Raisa Moni</h3>
-                            <span class="reviews__card-position">Envato Customer</span>
+            <h2 class="reviews__title">Trusted By More Than 55M Peoples</h2>
+            <div class="reviews__list" id="list-card">
+                <div class="reviews-card" id="card-si_1">
+                    <div class="reviews-card__header">
+                        <div class="reviews-card__people">
+                            <h3 class="reviews-card__people-name">Raisa Moni</h3>
+                            <span class="reviews-card__people-position">Envato Customer</span>
                         </div>
-                        <img src="./img/Social.png" alt="Social" class="reviews__card-social">
+                        <img src="./img/Social.png" alt="Social" class="reviews-card__social">
                     </div>
-                    <p class="reviews__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    <p class="reviews-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
                 </div>
-                <div id="card-si_2" class="reviews__card">
-                    <div class="reviews__card-header">
-                        <div class="people">
-                            <h3 class="reviews__card-name">Raisa Moni</h3>
-                            <span class="reviews__card-position">Envato Customer</span>
+                <div id="card-si_2" class="reviews-card">
+                    <div class="reviews-card__header">
+                        <div class="reviews-card__people">
+                            <h3 class="reviews-card__people-name">Raisa Moni</h3>
+                            <span class="reviews-card__people-position">Envato Customer</span>
                         </div>
-                        <img src="./img/Social.png" alt="Social" class="reviews__card-social">
+                        <img src="./img/Social.png" alt="Social" class="reviews-card__social">
                     </div>
-                    <p class="reviews__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    <p class="reviews-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
                 </div>   
-                <div id="card-si_3" class="reviews__card">
-                    <div class="reviews__card-header">
-                        <div class="people">
-                            <h3 class="reviews__card-name">Raisa Moni</h3>
-                            <span class="reviews__card-position">Envato Customer</span>
+                <div id="card-si_3" class="reviews-card">
+                    <div class="reviews-card__header">
+                        <div class="reviews-card__people">
+                            <h3 class="reviews-card__people-name">Raisa Moni</h3>
+                            <span class="reviews-card__people-position">Envato Customer</span>
                         </div>
-                        <img src="./img/Social.png" alt="Social" class="reviews__card-social">
+                        <img src="./img/Social.png" alt="Social" class="reviews-card__social">
                     </div>
-                    <p class="reviews__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    <p class="reviews-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
                 </div>   
-                <div id="card-si_4" class="reviews__card">
-                    <div class="reviews__card-header">
-                        <div class="people">
-                            <h3 class="reviews__card-name">Raisa Moni</h3>
-                            <span class="reviews__card-position">Envato Customer</span>
+                <div id="card-si_4" class="reviews-card">
+                    <div class="reviews-card__header">
+                        <div class="reviews-card__people">
+                            <h3 class="reviews-card__people-name">Raisa Moni</h3>
+                            <span class="reviews-card__people-position">Envato Customer</span>
                         </div>
-                        <img src="./img/Social.png" alt="Social" class="reviews__card-social">
+                        <img src="./img/Social.png" alt="Social" class="reviews-card__social">
                     </div>
-                    <p class="reviews__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    <p class="reviews-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
                 </div>   
             </div> 
             <div id="reviews__scroll" class="reviews__scroll">
-                <a id="si_1" class="reviews__scroll-item reviews__scroll-item-active"></a>
+                <a id="si_1" class="reviews__scroll-item"></a>
                 <a id="si_2" class="reviews__scroll-item"></a>
                 <a id="si_3" class="reviews__scroll-item"></a>
                 <a id="si_4" class="reviews__scroll-item"></a>
@@ -219,36 +227,38 @@
         </div>
     </section>
     <section id="news" class="news">
-        <div class="content">
-            <h2 class="news-title">Latest News From Us</h2>
-            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
-            <div class="news__block">
-                <div class="news__block__main">
-                    <img src="./img/Main_news.jpg" alt="Main_news" class="news__block__main-image">
-                    <a href="/"><h3 class="news__block__main-title"> The master bedroom suite is phenomenally spacious</h3></a> 
-                    <p class="news__block__main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="/" class="link-more">Continue Reading</a>
-                </div>
-                <div class="news__block__other">
-                    <div class="news-mini">
-                        <img class="news-mini-image" src="./img/news_1.jpg" alt="news 1">
-                        <div class="news-mini-content">
-                            <a href="/"><h4 class="news-mini-title">The master bedroom suite is phenomeny spacious</h4></a>
-                            <p class="news-mini-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                        </div>
+        <div class="container">
+            <div class="news__inner">
+                <h2 class="news__title">Latest News From Us</h2>
+                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                <div class="news__content">
+                    <div class="news__main">
+                        <img src="./img/Main_news.jpg" alt="Main_news" class="news__main-image">
+                        <a href="/"><h3 class="news__main-title"> The master bedroom suite is phenomenally spacious</h3></a> 
+                        <p class="news__main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="/" class="news__main-link link-more">Continue Reading</a>
                     </div>
-                    <div class="news-mini">
-                        <img class="news-mini-image" src="./img/news_2.jpg" alt="news 2">
-                        <div class="news-mini-content">
-                            <a href="/"><h4 class="news-mini-title">The master bedroom suite is phenomeny spacious</h4></a>
-                            <p class="news-mini-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    <div class="news__other">
+                        <div class="news-mini">
+                            <img class="news-mini__image" src="./img/news_1.jpg" alt="news 1">
+                            <div class="news-mini__content">
+                                <a href="/"><h4 class="news-mini__title">The master bedroom suite is phenomeny spacious</h4></a>
+                                <p class="news-mini__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="news-mini">
-                        <img class="news-mini-image" src="./img/news_3.jpg" alt="news 3">
-                        <div class="news-mini-content">
-                            <a href="/"><h4 class="news-mini-title">The master bedroom suite is phenomeny spacious</h4></a>
-                            <p class="news-mini-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                        <div class="news-mini">
+                            <img class="news-mini__image" src="./img/news_2.jpg" alt="news 2">
+                            <div class="news-mini__content">
+                                <a href="/"><h4 class="news-mini__title">The master bedroom suite is phenomeny spacious</h4></a>
+                                <p class="news-mini__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            </div>
+                        </div>
+                        <div class="news-mini">
+                            <img class="news-mini__image" src="./img/news_3.jpg" alt="news 3">
+                            <div class="news-mini__content">
+                                <a href="/"><h4 class="news-mini__title">The master bedroom suite is phenomeny spacious</h4></a>
+                                <p class="news-mini__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,43 +266,49 @@
         </div>
     </section>
     <section id="trial" class="trial">
-        <div class="content">
-            <div class="trial-header">
-                <h2 class="trial-title">Try 30 Days Free Trial</h2>
-                <p class="trial-text">No credit card reauired</p>
+        <div class="container">
+            <div class="trial__inner">
+                <div class="trial__header">
+                    <h2 class="trial__header-title">Try 30 Days Free Trial</h2>
+                    <p class="trial__header-text">No credit card reauired</p>
+                </div>
+                <button class="trial__button button">Get Stared</button>
             </div>
-            <button class="trial-button button">Get Stared</button>
         </div>
     </section>
     <section id="subscribe" class="subscribe">
-        <div class="content">
-            <h2 class="subscribe-title">AppSon</h2>
-            <form class="subscribe-form" action="/">
-                <input class="subscribe-form-input" type="text" placeholder="Enter your Email">
-                <button class="subscribe-form-button button">subscribe</button>
-            </form> 
+        <div class="container">
+            <div class="subscribe__inner">
+                <h2 class="subscribe__title">AppSon</h2>
+                <form class="subscribe__form" action="/">
+                    <input class="subscribe__form-input" type="text" placeholder="Enter your Email">
+                    <button class="subscribe__form-button button">subscribe</button>
+                </form>
+            </div>
         </div>
     </section>
     <footer id="footer" class="footer">
-        <div class="content">
-            <span class="foorter-corp">© 2018 Copyright, All Rights Reserved by AppSon</span>
-            <div class="footer-connection">
-                <div class="footer-links">
-                    <a href="/">Terms & Condition</a>
-                    <a href="/">Privacy Policy</a>
-                    <a href="/">Help</a>
-                </div>
-                <div class="footer-socials">
-                    <a class="footer-social" href="/"><img src="./img/Facebook.png" alt="Facebook"></a>
-                    <a class="footer-social" href="/"><img src="./img/Twiter.png" alt="Twiter"></a>
-                    <a class="footer-social" href="/"><img src="./img/Youtube.png" alt="Youtube"></a>
+        <div class="container">
+            <div class="footer__inner">
+                <span class="foorter__corp">© 2018 Copyright, All Rights Reserved by AppSon</span>
+                <div class="footer__connection">
+                    <div class="footer__links">
+                        <a class="footer__links-item" href="/">Terms & Condition</a>
+                        <a class="footer__links-item" href="/">Privacy Policy</a>
+                        <a class="footer__links-item" href="/">Help</a>
+                    </div>
+                    <div class="footer__socials">
+                        <a class="footer__socials-item" href="/"><img src="./img/Facebook.png" alt="Facebook"></a>
+                        <a class="footer__socials-item" href="/"><img src="./img/Twiter.png" alt="Twiter"></a>
+                        <a class="footer__socials-item" href="/"><img src="./img/Youtube.png" alt="Youtube"></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
     <div class="scroll-up">
-        <a href="#header" class="button button-circle">
-            <img src="./img/Arrow_up.svg" alt="arrow">
+        <a href="#header" class="scroll-up__button button button-circle">
+            <img class="scroll-up__image" src="./img/Arrow_up.svg" alt="arrow">
         </a>
     </div>
 </body>

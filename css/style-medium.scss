@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
 
-    .content {
+    .container {
         width: 800px;
     }
 
@@ -16,83 +16,84 @@
     }
 
     .features {
+        height: fit-content;
         padding: 50px 0;
 
-        & .content {
+        &__inner {
             flex-direction: column;
             align-items: center;
 
-            .card {
-                display: flex;
-                width: 90%;
-                align-items: flex-start;
+            & > .card:nth-child(even) {
                 margin: 5px;
-                text-align: left;
-                padding: 20px;
-
-                &-image {
-                    margin-right: 30px;
-                }
-                
-                &:nth-child(even) {
-                    margin: 5px;
-                }
             }
         }
     }
 
-    .about {
+    .card {
+        display: flex;
+        height: fit-content;
+        width: 90%;
+        align-items: flex-start;
+        margin: 5px;
+        text-align: left;
+        padding: 20px;
 
-        & .content {
+        &__image {
+            margin-right: 30px;
+        }
+    }
+
+    .about {
+        &__inner {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
         }
+    }
 
-        .wide-card {
-            position: relative;
-            width: fit-content;
-            height: fit-content;
-            margin: 0;
+    .wide-card {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        margin: 0;
 
-            & .link-more {
+        &__link {
+            color: white;
+        }
+
+        &__narrow-col {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__wide-col {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:first-child {
+
+            .wide-card__narrow-col {
+                position: absolute;
+                z-index: 5;
                 color: white;
+                background: rgba(1,1,1,0.7);
+                border-radius: 25px;
+                padding: 15px;
+                box-sizing: border-box;
             }
+        }
 
-            &__narrow-col {
-                width: 100%;
-                height: 100%;
-            }
-
-            &__wide-col {
-                width: 100%;
-                height: 100%;
-            }
-
-            &:first-child {
-
-                .wide-card__narrow-col {
-                    position: absolute;
-                    z-index: 5;
-                    color: white;
-                    background: rgba(1,1,1,0.7);
-                    border-radius: 25px;
-                    padding: 15px;
-                    box-sizing: border-box;
-                }
-            }
-
-            &:last-child {
-                .wide-card__wide-col {
-                    position: absolute;
-                    z-index: 5;
-                    color: white;
-                    background: rgba(1,1,1,0.5);
-                    border-radius: 25px;
-                    padding: 15px;
-                    box-sizing: border-box;
-                }
+        &:last-child {
+            .wide-card__wide-col {
+                position: absolute;
+                z-index: 5;
+                color: white;
+                background: rgba(1,1,1,0.5);
+                border-radius: 25px;
+                padding: 15px;
+                box-sizing: border-box;
             }
         }
     }
@@ -105,12 +106,13 @@
     .pricing {
         height: 1000px;
 
-        & .content {
+        &__inner {
             display: flex;
             flex-direction: column;
+            padding: 0;
         }
 
-        .description {
+        &__description {
             display: flex;
             width: 100%;
             flex-direction: column;
@@ -118,51 +120,51 @@
             box-sizing: border-box;
             padding: 0 20px;
             
-            & .buttons-line {
-                justify-content: center
-            }
         }
 
-        .plans {
+        &__buttons {
+            justify-content: center
+        }
+
+        &__plans {
             display: flex;
             justify-content: space-evenly;
             width: 100%;
-
-            .plan {
-                margin: 0;
-            }
         }
+    }
+
+    .plan {
+        margin: 0;
     }
 
     .news {
         height: fit-content;
         padding: 50px 0;
 
-        & .content {
+        &__inner {
             box-sizing: border-box;
             padding: 0px 10px;
         }
 
-        &__block {
+        &__content {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
 
-            &__main {
-                width: 100%;
-                margin-bottom: 40px;
-            }
+        &__main {
+            width: 100%;
+            margin-bottom: 40px;
+        }
 
-            &__other {
-                width: 100%;
-            }
+        &__other {
+            width: 100%;
         }
 
     }
 
     .footer {
-        
-        & .content {
+        &__inner {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
