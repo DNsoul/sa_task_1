@@ -1,14 +1,22 @@
 .scroll-up {
-    position: fixed;
-    right: 50px;
-    bottom: 100px;
+    position: absolute;
+    right: 25px;
+    bottom: 135px;
     z-index: 10;
 
     &__button {
+        background: #FFFFFF;
+    }
+
+    :hover {
         background: #FFFFFF;
 
         &::after {
             background: rgba(172, 185, 201, 0.23);
         }
+    }
+
+    @media (max-width: 1200px) {
+        bottom: 25px;
     }
 }

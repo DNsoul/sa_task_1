@@ -20,6 +20,8 @@
 
     &__burger {
         display: none;
+        padding: 2px;
+        border: 2px solid white;
     }
 
     &__brand {
@@ -123,8 +125,15 @@
                 align-items: center;
 
                 & > a {
+                    width: 100%;
+                    text-align: center;
                     color: white;
                     font-size: 18px;
+
+                    &:hover {
+                        color: white;
+                        background: #0063dd;
+                    }
                 }
             }
         }

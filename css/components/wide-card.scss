@@ -79,6 +79,10 @@
 
         &__link {
             color: white;
+
+            &::before {
+                background: url("../img/Arrow_white.svg") center no-repeat;
+            }
         }
 
         &__narrow-col {
