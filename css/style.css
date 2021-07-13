@@ -158,6 +158,11 @@ section {
   border: 2px solid white;
 }
 
+.nav-bar__burger:hover {
+  background: white;
+  color: #0F7BFF;
+}
+
 .nav-bar__brand {
   background-color: #0F7BFF;
   width: 179px;
@@ -315,6 +320,11 @@ section {
   visibility: visible;
   height: 250px;
   padding: 20px 0;
+}
+
+#burger-toggle:checked ~ .nav-bar__burger {
+  background: #0F7BFF;
+  color: white;
 }
 
 /* header */
@@ -1104,7 +1114,7 @@ section {
   margin-right: 8px;
 }
 
-.reviews__scroll-item:hover {
+.reviews__scroll-item--active {
   width: 38px;
   background-color: #0063DD;
 }
@@ -1499,10 +1509,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 .footer__corp {
@@ -1614,7 +1626,7 @@ section {
 .scroll-up {
   position: absolute;
   right: 25px;
-  bottom: 135px;
+  bottom: 25px;
   z-index: 10;
 }
 

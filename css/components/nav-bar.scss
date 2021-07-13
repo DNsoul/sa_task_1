@@ -22,6 +22,11 @@
         display: none;
         padding: 2px;
         border: 2px solid white;
+
+        &:hover {
+            background: white;
+            color: $first-color;
+        }
     }
 
     &__brand {
@@ -146,6 +151,11 @@
             visibility: visible;
             height: 250px;
             padding: 20px 0;
+        }
+
+        & ~ .nav-bar__burger {
+            background: $first-color;
+            color: white;
         }
     }
 }
