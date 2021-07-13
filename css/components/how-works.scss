@@ -1,0 +1,49 @@
+/* how-works */
+
+.how-works {
+    z-index: -1;
+    height: 635px;
+    background: #F5FCFD;
+
+    &__inner {
+        padding-top: 87px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 722px;
+        line-height: 150%;
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+
+    &__steps {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    @media (max-width: 800px) {
+        padding: 20px 0;
+        height: fit-content;
+
+        &__inner {
+            padding: 0;
+        }
+
+        &__text {
+            width: auto;
+        }
+
+        &__steps {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

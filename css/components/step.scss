@@ -1,0 +1,54 @@
+/* step */
+
+.step {
+    position: relative;
+    height: 221px;
+    width: 333px;
+
+    &__image {
+        position: relative;
+        margin-bottom: 8px;
+        z-index: 2;
+    }
+
+    &__title {
+        margin-bottom: 23px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    &:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        display: block;
+
+        top: 50px;
+        left: -200px;
+
+        z-index: 0;
+        
+        width: 780px;
+        border: 1px dashed #0F7BFF;
+    }
+
+    @media (max-width: 1200px) {
+        &:nth-child(even)::after {
+            width: 600px;
+            left: -170px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        width: 310px;
+        margin-bottom: 20px;
+
+        &:nth-child(even)::after {
+            display: none;
+        }
+    }
+}

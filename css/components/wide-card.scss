@@ -1,0 +1,142 @@
+/* wide-card */
+
+.wide-card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &:first-child {
+        margin-bottom: 230px;
+    }
+
+    &:last-child {
+        margin-bottom: 116px;
+    }
+
+    &__wide-col {
+        width: 49%;
+
+        & > .wide-card__image-warp::after {
+            top: -54px;
+            left: 8px
+        }
+    }
+
+    &__narrow-col {
+        width: 40.25%;
+
+        & > .wide-card__image-warp::after {
+            top: 27px;
+            left: 63px;
+        }
+    }
+
+    &__image {
+        position: relative;
+        border-radius: 20px;
+        z-index: 1;
+    }
+
+    &__image-warp {
+        position: relative;
+
+        &::after { 
+            content: "";
+            
+            position: absolute;
+    
+            width: 389.71px;
+            height: 482.98px;
+    
+            z-index: 0;
+    
+            background: linear-gradient(147.4deg, #0F7BFF 7.27%, #0063DD 93.68%);
+            border-radius: 40px;
+            transform: matrix(0.77, -0.64, -0.64, -0.77, 0, 0);
+        }
+    }
+
+    &__content {
+
+        &-title {
+            font-size: 32px;
+            line-height: 40px;
+            margin: 95px 0 30px 0;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 150%;
+            margin-bottom: 36px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        margin: 0;
+
+        &__link {
+            color: white;
+        }
+
+        &__narrow-col {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__wide-col {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:first-child {
+
+            .wide-card__narrow-col {
+                position: absolute;
+                z-index: 5;
+                color: white;
+                background: rgba(1,1,1,0.7);
+                border-radius: 25px;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+        }
+
+        &:last-child {
+            .wide-card__wide-col {
+                position: absolute;
+                z-index: 5;
+                color: white;
+                background: rgba(1,1,1,0.5);
+                border-radius: 25px;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+        max-width: fit-content;
+        height: fit-content;
+
+        &__image-warp {
+            overflow-x: clip;
+            border-radius: 25px;
+        }
+
+        &__content-title {
+            margin: 30px 0;
+        }
+
+        &:first-child {
+            margin-bottom: 20px;
+        }
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.scroll-up {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    z-index: 10;
+
+    &__button {
+        background: #FFFFFF;
+
+        &::after {
+            background: rgba(172, 185, 201, 0.23);
+        }
+    }
+}

@@ -1,0 +1,60 @@
+/* card */
+
+.card {
+    width: 362px;
+    height: 290px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 4px 16px rgba(0, 66, 148, 0.08);
+    border-radius: 5px;
+
+    &__image {
+        margin-top: 25px;
+    }
+
+    &__body {
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 21px 0 24px 0;
+        }
+    
+        &-text {
+            line-height: 20px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        display: flex;
+        height: fit-content;
+        width: 90%;
+        align-items: flex-start;
+        margin: 5px;
+        text-align: left;
+        padding: 20px;
+
+        &__image {
+            margin-right: 30px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        text-align: center;
+
+        &-image {
+            margin: 0;
+        }
+
+        &-body {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+/* navigation bar */
+
+#burger-toggle {
+    display: none;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    padding: 0 136px;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__burger {
+        display: none;
+    }
+
+    &__brand {
+        background-color: $first-color;
+        width: 179px;
+        border-radius: 0 0 21.5px 21.5px;
+        font-size: 14px;
+
+        font-weight: bold;
+        font-size: 36px;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        &-links {
+            display: flex;
+            justify-content: space-between;
+            width: 355px;
+            margin-right: 57px;
+
+
+            & > a {
+                font-weight: 500;
+                font-size: 16px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #929292;
+
+                &:hover {
+                    color: $first-color;
+                }
+            }
+        }
+
+        &-button {
+            color: white;
+            background-color: #0063DD;
+            text-transform: uppercase;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 70px;
+
+        &__brand {
+            height: 70px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        background: #0F7BFF;
+        box-sizing: border-box;
+        justify-content: space-around;
+
+        &__burger {
+            display: block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+
+        &__menu {
+            display: flex;
+            visibility: hidden;
+            position: absolute;
+            top: 69px;
+            flex-direction: column;
+            height: 250px;
+            background: #0F7BFF;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            transition: 0.1s linear;
+
+            &-links {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                height: 100%;
+                justify-content: space-evenly;
+                width: 100%;
+                align-items: center;
+
+                & > a {
+                    color: white;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+#burger-toggle {
+    &:checked {
+        & ~ .nav-bar__menu {
+            visibility: visible;
+            height: 250px;
+            padding: 20px 0;
+        }
+    }
+}

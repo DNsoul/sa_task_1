@@ -1,0 +1,19 @@
+.about {
+    height: 1190px;
+    overflow-x: clip;
+    padding: 60px 0;
+
+    @media (max-width: 1200px) {
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    @media (max-width: 800px) {
+        height: fit-content;
+        padding: 60px 0;
+    }
+}

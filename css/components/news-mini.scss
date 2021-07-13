@@ -1,0 +1,41 @@
+/* news-mini */
+
+.news-mini {
+    width: 609px;
+    display: flex;
+    margin-bottom: 15px;
+
+    &__image {
+        width: 166px;
+        height: 130px;
+        margin-right: 20px;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        color: #000000;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        width: 90%;
+    }
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+
+        width: 300px;
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    }
+}

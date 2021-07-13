@@ -1,0 +1,40 @@
+/* trial */
+
+.trial {
+    height: 335px;
+    background: #F5FCFD;
+
+    &__inner {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__header {
+        box-sizing: border-box;
+
+        &-title {
+            font-weight: bold;
+            font-size: 32px;
+        }
+    
+        &-text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+
+    &__button {
+        width: 264px;
+    }
+
+    @media (max-width: 800px) {
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}

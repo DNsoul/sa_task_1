@@ -1,0 +1,25 @@
+/* testimonials */
+
+.testimonials {
+    position: relative;
+    background: #F5FCFD;
+    overflow-x: clip;
+    display: flex;
+    justify-content: flex-end;
+    height: 600px;
+    width: 100%;
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 59.5%;
+    }
+
+    @media (max-width: 800px) {
+        height: 440px;
+
+        &__image {
+            display: none;
+        }
+    }
+}

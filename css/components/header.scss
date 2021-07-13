@@ -1,0 +1,88 @@
+/* header */
+
+.header {
+    position: relative;
+    background: url("../img/wave.svg") center no-repeat;
+    height: 1015px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+    &__inner {
+        width: 655px;
+        height: 239px;
+        
+        margin-top: 188px;
+
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        color: black;
+        margin: 0 0 30px 0;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 27px;
+        margin: 0 0 33px 0;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 147px;
+    }
+
+    &__scroll-down {
+        position: absolute;
+        bottom: -35px;
+        z-index: 3;
+    }
+
+    &__devices {
+        position: absolute;
+        height: 535px;
+        overflow: hidden;
+        bottom: 0;
+        z-index: 1;
+        
+        &-image {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 800px) {
+        &__inner {
+            margin-top: 90px;
+            width: 90%;
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 0;
+
+            &-item {
+                width: 320px;
+                margin-bottom: 5px;
+            }
+        }
+
+        &__devices {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: -1;
+            
+            &-image {
+                width: 900px;
+            }
+        }
+    }
+}

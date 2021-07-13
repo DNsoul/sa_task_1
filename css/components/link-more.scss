@@ -1,0 +1,22 @@
+/* link-more */
+
+.link-more {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #0063DD;
+
+    &::before { 
+        content: "";
+        
+        position: absolute;
+        right: -75px;
+        top: 4px;
+
+        width: 67px;
+        height: 15px;
+        
+        background: url('../img/Arrow_blue.svg') no-repeat right center;
+    }
+}
